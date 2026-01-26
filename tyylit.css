@@ -66,12 +66,14 @@ a:visited {
 }
 footer {
     display: flex;
+    justify-content:baseline;
     background-color: #F13C30;
-    height: 101px;
+    height:101px;
     p{
         color:#FFFFFF;
         font-size: 26px;
     }
+}
 
 }
 .footer-left{
