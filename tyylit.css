@@ -65,8 +65,10 @@ a:visited {
     }
 }
 footer {
-    display:inline;
+    display: inline;
     background-color: #F13C30;
+    width:100%;
+    height: 101px;
     p{
         color:#FFFFFF;
         font-size: 26px;
@@ -80,14 +82,16 @@ footer {
         
     }
     p{
-        margin-right: 166px
+        margin-right: 166px;
+        
     }
 }
 .footer-middle{
-    display: center
+    display: center;
     
     
 }
+
  .right-side{
         display: flex;
         margin:13px,18px,13px, 69px;
