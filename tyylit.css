@@ -73,7 +73,7 @@ footer {
 
 }
 .footer-left{
-    display:inline;
+    display:flex;
     img{
         margin:0px,19px,0px,0px;
         
@@ -87,11 +87,12 @@ footer {
     
     
 }
-.footer-right{
-    .right-side{
-        display: inline;
+ .right-side{
+        display: flex;
         margin:13px,18px,13px, 69px;
-    }
-}
+ }
+ .left-side{
+    display:center;
+ }
 
     
