@@ -1,0 +1,97 @@
+body {
+    background-color: #C5CBE3;
+
+}
+h1 {
+    color: #222222;
+    font-family: Nabla;
+    font-size: 64px;
+}
+
+
+
+header {
+    background-color: #F13C30;
+    
+}
+
+h2 { /* Johanna menu otsikot */
+    color: #222222;
+    font-family: Nabla;
+    font-size: 50px;
+}
+h3 { /* Yhtiön nimi iso valkone otsikko vasen yläkulma */
+    color:#FFFFFF;
+    font-family: Inter;
+    font-size: 170px;
+}
+h4 { /*Fresh Salad ja ASian wok otsikot etusivul */
+    color:#222222;
+    font-family: Nabla;
+    font-size: 36px;
+}
+p {
+    color: #3F3F3F;
+    font-family: fira Sans;
+    font-size: 18px;
+}
+
+a, a:active {
+    color: #FFFFFF;
+}
+a:hover {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: underline;
+}
+.container {
+    display: center;
+    margin-bottom: 18px;
+    p{
+        margin: center;
+    }
+}
+.tarjoamme {
+    h1 {
+        display: flex;
+    }
+    h4 {
+        gap: 400px;
+    }
+    a {
+        display: flex;
+        gap: 265px;
+    }
+}
+footer {
+    background-color: #F13C30;
+    p{
+        color:#FFFFFF;
+        font-size: 26px;
+    }
+
+}
+.footer-left{
+    display:inline;
+    img{
+        margin:0px,19px,0px,0px;
+        
+    }
+    p{
+        margin-right: 166px
+    }
+}
+.footer-middle{
+    display: center
+    
+    
+}
+.footer-right{
+    .right-side{
+        display: inline;
+        margin:13px,18px,13px, 69px;
+    }
+}
+
+    
