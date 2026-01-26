@@ -65,6 +65,7 @@ a:visited {
     }
 }
 footer {
+    display:inline;
     background-color: #F13C30;
     p{
         color:#FFFFFF;
