@@ -65,9 +65,8 @@ a:visited {
     }
 }
 footer {
-    display: inline;
+    display: flex;
     background-color: #F13C30;
-    width:100%;
     height: 101px;
     p{
         color:#FFFFFF;
