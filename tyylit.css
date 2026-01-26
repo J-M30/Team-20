@@ -69,6 +69,7 @@ footer {
     justify-content:baseline;
     background-color: #F13C30;
     height:101px;
+    width:100%;
     p{
         color:#FFFFFF;
         font-size: 26px;
@@ -77,7 +78,7 @@ footer {
 
 }
 .footer-left{
-    display:flex;
+    display:inline;
     img{
         margin:0px,19px,0px,0px;
         
