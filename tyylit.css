@@ -94,7 +94,8 @@ a:visited {
 .vasen {
     display: flex;
     flex-direction: column;
-    
+    ul{
+            display: flex;
 }
 .oikea {
     display: flex;
