@@ -83,7 +83,8 @@ a:visited {
     
 }
 .ruoka2 {
-    margin-right: 200px;
+    display: flex;
+    margin-right: 100px;
 }
     
 .Loyda {
