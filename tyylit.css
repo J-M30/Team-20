@@ -54,25 +54,55 @@ a:visited {
     text-decoration: underline;
 }
 .container {
+    p {
     display: center;
     margin-left: 375px;
     margin-right: 375px;
-    p{
-        margin-left: 163px;
+    }
+    h1{
+        text-align: center;
     }
 }
 .tarjoamme {
     h1 {
-        display: flex;
+        text-align: center;
+        margin-top: 42px;
     }
-    a {
-        display: flex;
+    img {
+        width: 461px;
+        height: 307px;
+        margin-left: 375px;
         gap: 265px;
     }
 }
 .tarjonta-row {
+    text-align: center;
     display: flex;
     gap:400px;
+    margin-left: 556px;
+    
+}
+    
+.Loyda {
+    display: flex;
+    align-items: stretch;
+    margin-left: 375px;
+    margin-top: 48px;
+    
+}
+.vasen {
+    display: flex;
+    flex-direction: column;
+    
+}
+.oikea {
+    display: flex;
+    margin-left: 342px;
+}
+.oikea img {
+    width: 461px;
+    height: 241px;
+    object-fit: cover;
 }
 footer {
     display: grid;
