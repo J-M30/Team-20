@@ -256,6 +256,7 @@ nav{
     display: flex;
     justify-content: center;
     margin-top: 45px;
+ }
 .header {
     background-color: #F13C20; 
     height: 120px;
