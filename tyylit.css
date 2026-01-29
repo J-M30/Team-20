@@ -12,6 +12,10 @@ h1 {
     color: #222222;
     font-family: Nabla;
     font-size: 64px;
+    font-family: "Nabla", system-ui;
+        filter:grayscale(100%) brightness(0);
+        text-shadow: none !important;
+        
 }
 
 
