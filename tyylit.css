@@ -118,39 +118,47 @@ a:visited {
     }
 }
 .tarjoamme {
-    padding: 0 175px; 
-    margin-bottom: 60px;
+    margin-left: 175px;
+    margin-right: 175px;
+    margin-top: 50px;
+    h1 {
+        text-align: center;
+        margin-top: 42px;
+    }
+    img {
+        
+        width: 330px;
+        height: 220px;
+        padding-left: 0px;
+    }
+    .ekakuva {
+        width: 330px;
+        height: 220px;
+        margin-top: 48px;
+        object-fit: cover;
+    }
+    .tokakuva {
+        width: 330px;
+        height: 220px;
+        margin-top: 48px;
+        margin-left: 60px;
+        object-fit: cover;
+    }
+    .map {
+        object-fit: cover;
+        width: 530px;
+        height: 280px;
+    }
 }
-
-
 .tarjonta-row {
+
     display: flex;
-    justify-content: space-between; 
-    align-items: flex-end; 
+    gap: 700px;
+    margin-left: 230px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    
 }
-
-
-.tarjonta-kuvat {
-    display: flex;
-    justify-content: space-between; 
-    align-items: flex-end; 
-    width: 100%;
-}
-
-.ruokakuva {
-    width: 400px;
-    height: 270px;
-    object-fit: cover;
-}
-
-.map-kuva {
-    width: 590px;
-    height: 320px;
-    object-fit: cover;
-}
-
     
 .Loyda {
     display: flex;
