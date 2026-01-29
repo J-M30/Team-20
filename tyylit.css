@@ -487,10 +487,11 @@ h5 { /*Löydä meidät otsikko etusivulla */
 }
 @media(max-width:880px){
        
-    
-    img{
+   .ruokalajit{
+       img{
         width:90px;
         display: none !important;
+    } 
     }
 }
 @media(max-width:550px){
