@@ -15,6 +15,9 @@ h1 {
     color: #222222;
     font-family: Nabla;
     font-size: 64px;
+    font-family: "Nabla", system-ui;
+        filter:grayscale(100%) brightness(0);
+        text-shadow: none !important;
 }
 
 
@@ -37,9 +40,12 @@ h3 { /* Yhtiön nimi iso valkone otsikko vasen yläkulma */
     letter-spacing: -2px;
 }
 h4 { /*Fresh Salad ja ASian wok otsikot etusivul */
-    color:#222222;
+    color: #222222;
     font-family: Nabla;
     font-size: 36px;
+    font-family: "Nabla", system-ui;
+        filter:grayscale(100%) brightness(0);
+        text-shadow: none !important;
 }
 
 p {
@@ -232,7 +238,11 @@ nav{
     
 }
 h5 { /*Löydä meidät otsikko etusivulla */
-    color:#222222;
+    color: #222222;
     font-family: Nabla;
     font-size: 64px;
+    font-family: "Nabla", system-ui;
+        filter:grayscale(100%) brightness(0);
+        text-shadow: none !important;
+
 }
