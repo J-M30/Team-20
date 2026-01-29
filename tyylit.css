@@ -171,6 +171,7 @@ a:visited {
     display: flex;
     flex-direction: column;
     ul{
+        display:flex;
         list-style-type: none;
     }
 }
