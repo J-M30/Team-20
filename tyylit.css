@@ -56,8 +56,8 @@ a:visited {
 .container {
     p {
     display: center;
-    margin-left: 375px;
-    margin-right: 375px;
+    margin-left: 175px;
+    margin-right: 175px;
     }
     h1{
         text-align: center;
@@ -69,20 +69,63 @@ a:visited {
         margin-top: 42px;
     }
     img {
-        width: 461px;
-        height: 307px;
-        margin-left: 375px;
-        gap: 265px;
+        
+        width: 330px;
+        height: 220px;
+        padding-left: 0px;
+    }
+    .ekakuva {
+        width: 330px;
+        height: 220px;
+        margin-top: 48px;
+        margin-left: 175px;
+    }
+    .tokakuva {
+        width: 330px;
+        height: 220px;
+        margin-top: 48px;
+        margin-left: 60px;
+ 
+    }
+    .map {
+        margin-left: 70px;
+        width: 530px;
+        height: 280px;
     }
 }
+}
 .tarjonta-row {
+
+     .ekaotsikko{
+        text-align: center;
+        display: flex;
+        margin-left: 200px;
+    }
+    .tokaotsikko{
+        text-align: center;
+        display: flex;
+        margin-left: 150px;
+        
+    }
+    .karttaohjet{
+        text-align: center;
+        display: flex;
+        margin-inline-start: -50px;
+    
+    }
+
     text-align: center;
     display: flex;
     gap:400px;
-    margin-left: 556px;
+    margin-left: 50px;
+
+    
     
 }
-
+.ekakuva {
+    margin-top: 48px;
+    margin-left: 375px;
+}
     
 .Loyda {
     display: flex;
@@ -214,4 +257,10 @@ nav{
     width: 40px;
     height: auto;
     
+}
+
+h5 { /*Löydä meidät otsikko etusivulla */
+    color:#222222;
+    font-family: Nabla;
+    font-size: 64px;
 }
