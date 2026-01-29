@@ -165,9 +165,11 @@ a:visited {
         text-align: center;
         display: flex;
         margin-inline-start: -50px
+        h5{
         font-family: "Nabla", system-ui;
         filter:grayscale(100%) brightness(0);
         text-shadow: none !important;
+        }
     
     }
 
