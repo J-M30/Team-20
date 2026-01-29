@@ -305,5 +305,24 @@ h5 { /*Löydä meidät otsikko etusivulla */
         gap: 20px;
     }
 }
+@media(max-width:880px){
+       
+    
+    img{
+        width:90px;
+        display: none !important;
+    }
+}
+@media(max-width:550px){
+    .ruokalajit{
+        
+            font-size: 16px;
+            b{
+                font-size: 17px;
+            }
+        
+    }
+}
+
 
 
