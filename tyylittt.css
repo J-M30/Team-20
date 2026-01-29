@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #C5CBE3;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0;
+}
+h1 {
+    color: #222222;
+    font-family: Nabla;
+    font-size: 64px;
+}
+
+
+
+header {
+    background-color: #F13C30;
+    
+}
+
+h2 { /* Johanna menu otsikot */
+    color: #222222;
+    font-family: Nabla;
+    font-size: 50px;
+}
+h3 { /* Yhtiön nimi iso valkone otsikko vasen yläkulma */
+    color: white;
+    font-size: 70px;
+    margin-left: 30px;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+h4 { /*Fresh Salad ja ASian wok otsikot etusivul */
+    color:#222222;
+    font-family: Nabla;
+    font-size: 36px;
+}
+
+p {
+    color: #3F3F3F;
+    font-family: fira Sans;
+    font-size: 18px;
+}
+
+a, a:active {
+    color: #FFFFFF;
+}
+a, a:active, a:hover {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: underline;
+}
+.container {
+    p {
+    display: center;
+    margin-left: 175px;
+    margin-right: 175px;
+    }
+    h1{
+        text-align: center;
+    }
+}
+.tarjoamme {
+    padding: 0 175px; 
+    margin-bottom: 60px;
+}
+
+
+.tarjonta-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end; 
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.tarjonta-kuvat {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end; 
+    width: 100%;
+}
+
+.ruokakuva {
+    width: 400px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.map-kuva {
+    width: 590px;
+    height: 320px;
+    object-fit: cover;
+}
+
+
+.Loyda {
+    display: flex;
+    align-items: stretch;
+    margin-left: 375px;
+    margin-top: 48px;
+    
+}
+.vasen {
+    display: flex;
+    flex-direction: column;
+}
+.oikea {
+    display: flex;
+    margin-left: 342px;
+}
+.oikea img {
+    width: 461px;
+    height: 241px;
+    object-fit: cover;
+}
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #F13C30;
+    height: 139px;
+    width: 100%;
+    margin-top: auto;
+    p{
+        color:#FFFFFF;
+        font-size: 26px;
+    }
+}
+.footer-left{
+    display:flex;
+    img{
+        margin:0px 19px 0px 0px;
+    }
+    p{
+        margin-top:55px;  
+    }
+}
+.footer-middle{
+    
+    nav li{
+        display: flex;
+        justify-content: center;
+        color:#FFFFFF;
+        font-size: 26px;
+    }
+}
+
+nav{
+    ul{
+       list-style-type: none; 
+       padding-inline-start: 0px; 
+    }
+}
+
+.tiedot{
+    margin-top: 45px;
+}
+.footer-right{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+ .right-side{
+        ul{
+            display: flex;
+            font-size: 26px;
+            margin-left: 20%;
+        }
+        list-style-type: none;
+ }
+ .left-side{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+ }
+.header {
+    background-color: #F13C20; 
+    height: 120px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+.seolbites-logo {
+    max-width: 1%;
+    height: 117px;
+    display: block;
+}
+
+.header-logo {
+    display: flex;
+}
+.header-bottom{
+    margin-left: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header-nav a {
+    margin-right: 72px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.header-nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+.ruotsinlippu {
+
+    width: 40px;
+    height: auto;
+    
+}
+h5 { /*Löydä meidät otsikko etusivulla */
+    color:#222222;
+    font-family: Nabla;
+    font-size: 64px;
+}
