@@ -164,7 +164,10 @@ a:visited {
     .karttaohjet{
         text-align: center;
         display: flex;
-        margin-inline-start: -50px;
+        margin-inline-start: -50px
+        font-family: "Nabla", system-ui;
+        filter:grayscale(100%) brightness(0);
+        text-shadow: none !important;
     
     }
 
