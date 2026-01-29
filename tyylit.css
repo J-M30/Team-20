@@ -118,6 +118,9 @@ a:visited {
     }
 }
 .tarjoamme {
+    margin-left: 175px;
+    margin-right: 175px;
+    margin-top: 50px;
     h1 {
         text-align: center;
         margin-top: 42px;
@@ -132,58 +135,29 @@ a:visited {
         width: 330px;
         height: 220px;
         margin-top: 48px;
-        margin-left: 175px;
+        object-fit: cover;
     }
     .tokakuva {
         width: 330px;
         height: 220px;
         margin-top: 48px;
         margin-left: 60px;
- 
+        object-fit: cover;
     }
     .map {
-        margin-left: 70px;
+        object-fit: cover;
         width: 530px;
         height: 280px;
     }
 }
-}
 .tarjonta-row {
 
-     .ekaotsikko{
-        text-align: center;
-        display: flex;
-        margin-left: 200px;
-    }
-    .tokaotsikko{
-        text-align: center;
-        display: flex;
-        margin-left: 150px;
-        
-    }
-    .karttaohjet{
-        text-align: center;
-        display: flex;
-        margin-inline-start: -50px
-        h5{
-        font-family: "Nabla", system-ui;
-        filter:grayscale(100%) brightness(0);
-        text-shadow: none !important;
-        }
-    
-    }
-
-    text-align: center;
     display: flex;
-    gap:400px;
-    margin-left: 50px;
-
+    justify-content: space-between; 
+    align-items: flex-end; 
+    width: 100%;
+    margin-bottom: 50px;
     
-    
-}
-.ekakuva {
-    margin-top: 48px;
-    margin-left: 375px;
 }
     
 .Loyda {
