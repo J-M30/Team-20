@@ -434,3 +434,72 @@ h5 { /*Löydä meidät otsikko etusivulla */
         }
     }
 }
+@media (max-width: 768px) {
+
+    
+    .container p, .tarjoamme, .Loyda {
+        margin-left: 20px ;
+        margin-right: 20px ;
+        padding: 0 10px ;
+    }
+
+    
+    .header, .tarjonta-row, .tarjonta-kuvat, .Loyda, .footer-right {
+        flex-direction: column ;
+        height: auto ;
+        text-align: center;
+        align-items: center;
+    }
+
+    
+    .ruokakuva, .map-kuva, .oikea img, .oikea {
+        width: 100% ;
+        height: auto ;
+        margin-top: 20px;
+    }
+
+    
+    h1 { font-size: 38px; }
+    h3 { font-size: 35px; margin-left: 0; }
+    h5 { font-size: 38px; }
+
+    
+    .header-bottom {
+        align-items: center;
+        margin-top: 15px;
+    }
+    .header-nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header-nav a {
+        margin-right: 15px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+}
+@media(max-width:880px){
+       
+    
+    img{
+        width:90px;
+        display: none !important;
+    }
+}
+@media(max-width:550px){
+    .ruokalajit{
+        
+            font-size: 16px;
+            b{
+                font-size: 17px;
+            }
+        
+    }
+}
