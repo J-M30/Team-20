@@ -153,8 +153,8 @@ a:visited {
 .tarjonta-row {
 
     display: flex;
-    justify-content: space-between; 
-    align-items: flex-end; 
+    gap: 700px;
+    margin-left: 230px;
     width: 100%;
     margin-bottom: 50px;
     
@@ -383,3 +383,8 @@ h5 { /*Löydä meidät otsikko etusivulla */
                 padding-bottom:30% ;
             }
         }
+.kuviaruoka {
+    display: flex;
+    gap: 550px;
+    margin-left: 162px
+}
