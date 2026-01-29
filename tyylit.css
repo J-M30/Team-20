@@ -394,3 +394,43 @@ h5 { /*Löydä meidät otsikko etusivulla */
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 1231px){
+    .footer-right{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        height: auto;
+    }
+    .pääruokien-kuvat{
+        .yläkuva{
+            padding-bottom:100% ;
+         }
+    }
+    .footer-left{
+        display:list-item;
+        img{
+            margin:0px auto 0px 0px;
+        }
+        p{
+            margin-top:13px;  
+        }
+    }
+}
+
+@media(max-width:1099){
+    .footer-left {
+        display:list-item;
+        justify-content: start;
+        width: 100%;
+        height: auto;
+    }
+    .ruokalajit{
+        img{
+            display:none;
+        }
+    }
+}
