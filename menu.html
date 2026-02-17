@@ -32,6 +32,25 @@
     </header>
 
     <div class="wrapper">
+
+        <div class="lounaslista">
+        <script>
+            function tulostaLounas(){
+                xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange=function() {
+                    if(this.readystate == 4 && this.status == 200){
+                        document.getElementById("lounas").
+                        innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("Get", "./tulostaLounas.php", true);
+                xmlhttp.send();
+            }
+        </script>
+        <button class="nappi" onclick='tulostaSaaliit();'><h2>Päivän lounas</h2></button>
+        <div id="lounas"></div>
+        </div>
+        
         <div class="otsikko">
             <h1>MENU</h1>
         </div>
