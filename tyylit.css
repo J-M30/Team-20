@@ -389,6 +389,35 @@ h5 { /*Löydä meidät otsikko etusivulla */
     gap: 550px;
     margin-left: 162px
 }
+
+.lounaslista{
+   background-color: #efe2ba;
+   margin-top:5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+    padding-bottom: 1%;
+    padding-top:1%; 
+    display:flex;
+    justify-content:center;
+
+    .nappi{
+        background-color:#D79922;
+        display:flex;
+        justify-content: center;
+    }
+    h2{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+        font-family: "Nabla", system-ui;
+        filter:grayscale(100%) brightness(0);
+        text-shadow: none !important;
+        
+    }
+}
+
+
 @media (max-width: 900px) {
   .härdelli {
     grid-template-columns: 1fr;
