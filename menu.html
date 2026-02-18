@@ -35,22 +35,57 @@
 
         <div class="lounaslista">
         <script>
-            function tulostaLounas(){
+
+            function lueLounas(){
                 xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange=function() {
-                    if(this.readystate == 4 && this.status == 200){
-                        document.getElementById("lounas").
-                        innerHTML = this.responseText;
-                    }
+                xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                        let data=JSON.parse(this.responseText);
+                        console.log(data);
+                        tulostaLounas(data.Ruuat, data.Juomat, data.Lisukkeet);
+                }
                 };
-                xmlhttp.open("Get", "./tulostaLounas.php", true);
-                xmlhttp.send();
+                xmlhttp.open("GET", "./tulostaLounas.php", true);
+                xmlhttp.send();	
             }
+
+            function tulostaLounas(Ruuat, Juomat, Lisukkeet){
+            let text="<table border='1'>";
+           if (Ruuat && Ruuat.length >0){
+                for (let i=0; i<Ruuat.length; i++){
+                text+="<tr><td>"+Ruuat[i].ruokaId+"<td>"+Ruuat[i].ruokaNimi+"<td>"+Ruuat[i].ruokaHinta+"</td></tr>";
+                text+="<tr><td colspan='3'><a href='poisto.php?taulu=Ruuat&poistettava="+Ruuat[i].ruokaId+"'>Poista</a> | <a href='muokkalounas.php?taulu=Ruuat&muokattava="+Ruuat[i].ruokaId+"'>Muokkaa</a></td></tr>";
+                }
+            }
+            if (Juomat && Juomat.length >0){
+                for (let j=0; j<Juomat.length; j++){
+                    text+="<tr><td>"+Juomat[j].juomaId+"<td>"+Juomat[j].juomaNimi+"<td>"+Juomat[j].juomaHinta+"</td></tr>";
+                    text+="<tr><td colspan='3'><a href='poisto.php?taulu=Juomat&poistettava="+Juomat[j].juomaId+"'>Poista</a> | <a href='muokkalounas.php?taulu=Juomat&muokattava="+Juomat[j].juomaId+"'>Muokkaa</a></td></tr>";
+                }    
+            }
+            if (Lisukkeet && Lisukkeet.length >0){
+                for (let l=0; l<Lisukkeet.length; l++){
+                    text+="<tr><td>"+Lisukkeet[l].LisukeId+"<td>"+Lisukkeet[l].lisukeNimi+"<td>"+Lisukkeet[l].lisukeHinta+"</td></tr>";
+                    text+="<tr><td colspan='3'><a href='poisto.php?taulu=Lisukkeet&poistettava="+Lisukkeet[l].LisukeId+"'>Poista</a> | <a href='muokkalounas.php?taulu=Lisukkeet&muokattava="+Lisukkeet[l].LisukeId+"'>Muokkaa</a></td></tr> ";
+                }
+            }
+            text+="</table>";
+            document.getElementById("lounastaulukko").innerHTML=text;
+        }
+
         </script>
-        <button class="nappi" onclick='tulostaSaaliit();'><h2>Päivän lounas</h2></button>
-        <div id="lounas"></div>
+        <button onclick='lueLounas();'>Lounas</button>
+        <p id='lounas'>
+        </p>
+        <h2>Päivän lounas</h2>
+        <div id='lounastaulukko'></div>
         </div>
+
+        <a href="./lisaaLounas.html">Lisää</a>
+
         
+        
+
         <div class="otsikko">
             <h1>MENU</h1>
         </div>
