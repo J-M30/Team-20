@@ -40,38 +40,66 @@
                 xmlhttp = new XMLHttpRequest();
                 xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
+                    //parsitaan JSON-data ja tulostetaan taulukko
                         let data=JSON.parse(this.responseText);
                         console.log(data);
                         tulostaLounas(data.Ruuat, data.Juomat, data.Lisukkeet);
                 }
                 };
-                xmlhttp.open("GET", "./tulostaLounas.php", true);
+                xmlhttp.open("GET", "tulostaLounas.php", true);
                 xmlhttp.send();	
+                function poista(taulu, id){
+
+}
+
             }
 
-            function tulostaLounas(Ruuat, Juomat, Lisukkeet){
-            let text="<table border='1'>";
-           if (Ruuat && Ruuat.length >0){
-                for (let i=0; i<Ruuat.length; i++){
-                text+="<tr><td>"+Ruuat[i].ruokaId+"<td>"+Ruuat[i].ruokaNimi+"<td>"+Ruuat[i].ruokaHinta+"</td></tr>";
-                text+="<tr><td colspan='3'><a href='poisto.php?taulu=Ruuat&poistettava="+Ruuat[i].ruokaId+"'>Poista</a> | <a href='muokkalounas.php?taulu=Ruuat&muokattava="+Ruuat[i].ruokaId+"'>Muokkaa</a></td></tr>";
-                }
-            }
-            if (Juomat && Juomat.length >0){
-                for (let j=0; j<Juomat.length; j++){
-                    text+="<tr><td>"+Juomat[j].juomaId+"<td>"+Juomat[j].juomaNimi+"<td>"+Juomat[j].juomaHinta+"</td></tr>";
-                    text+="<tr><td colspan='3'><a href='poisto.php?taulu=Juomat&poistettava="+Juomat[j].juomaId+"'>Poista</a> | <a href='muokkalounas.php?taulu=Juomat&muokattava="+Juomat[j].juomaId+"'>Muokkaa</a></td></tr>";
-                }    
-            }
-            if (Lisukkeet && Lisukkeet.length >0){
-                for (let l=0; l<Lisukkeet.length; l++){
-                    text+="<tr><td>"+Lisukkeet[l].LisukeId+"<td>"+Lisukkeet[l].lisukeNimi+"<td>"+Lisukkeet[l].lisukeHinta+"</td></tr>";
-                    text+="<tr><td colspan='3'><a href='poisto.php?taulu=Lisukkeet&poistettava="+Lisukkeet[l].LisukeId+"'>Poista</a> | <a href='muokkalounas.php?taulu=Lisukkeet&muokattava="+Lisukkeet[l].LisukeId+"'>Muokkaa</a></td></tr> ";
-                }
-            }
-            text+="</table>";
-            document.getElementById("lounastaulukko").innerHTML=text;
+function tulostaLounas(Ruuat, Juomat, Lisukkeet) {
+    let text = "<table border='1'>";
+
+    if (Ruuat) {
+        for (let i = 0; i < Ruuat.length; i++) {
+            text += "<tr><td>" + Ruuat[i].ruokaId + "<td>" + Ruuat[i].ruokaNimi + "<td>" + Ruuat[i].ruokaHinta + "</td></tr>";
+            text += "<tr><td colspan='3'>" +
+                    "<a href='#' onclick=\"poista('Ruuat', " + Ruuat[i].ruokaId + "); return false;\">Poista</a> | " +
+                    "<a href='#' onclick=\"muokkaa('Ruuat', " + Ruuat[i].ruokaId + "); return false;\">Muokkaa</a>" +
+                    "</td></tr>";
         }
+    }
+
+    if (Juomat) {
+        for (let j = 0; j < Juomat.length; j++) {
+            text += "<tr><td>" + Juomat[j].juomaId + "<td>" + Juomat[j].juomaNimi + "<td>" + Juomat[j].juomaHinta + "</td></tr>";
+            text += "<tr><td colspan='3'>" +
+                    "<a href='#' onclick=\"poista('Juomat', " + Juomat[j].juomaId + "); return false;\">Poista</a> | " +
+                    "<a href='#' onclick=\"muokkaa('Juomat', " + Juomat[j].juomaId + "); return false;\">Muokkaa</a>" +
+                    "</td></tr>";
+        }
+    }
+
+    if (Lisukkeet) {
+        for (let l = 0; l < Lisukkeet.length; l++) {
+            text += "<tr><td>" + Lisukkeet[l].LisukeId + "<td>" + Lisukkeet[l].lisukeNimi + "<td>" + Lisukkeet[l].lisukeHinta + "</td></tr>";
+            text += "<tr><td colspan='3'>" +
+                    "<a href='#' onclick=\"poista('Lisukkeet', " + Lisukkeet[l].LisukeId + "); return false;\">Poista</a> | " +
+                    "<a href='#' onclick=\"muokkaa('Lisukkeet', " + Lisukkeet[l].LisukeId + "); return false;\">Muokkaa</a>" +
+                    "</td></tr>";
+        }
+    }
+
+    text += "</table>";
+    document.getElementById("lounastaulukko").innerHTML = text; //lisää valmis taulukko HTML-elementtiin
+}
+function poista(taulu, id) {
+    fetch(`poisto.php?taulu=${taulu}&poistettava=${id}`)
+        .then(response => response.json())
+        .then(data => {
+            if(data.status === "ok") {
+                
+                lueLounas(); //päivittää taulukon
+            }
+        });
+}
 
         </script>
         <button onclick='lueLounas();'>Lounas</button>
