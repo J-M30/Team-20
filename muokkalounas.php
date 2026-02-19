@@ -16,11 +16,11 @@ try {
     // Haetaan VAIN ruuan tiedot
     // Valitaan oikea SQL-lause taulun perusteella
     if ($taulu == "Ruuat") {
-        $sql = "SELECT * FROM Ruuat WHERE RuokaID = ?";
+        $sql = "SELECT * FROM Ruuat WHERE ruokaId = ?";
     } elseif ($taulu == "Juomat") {
-        $sql = "SELECT * FROM Juomat WHERE JuomaID = ?";
+        $sql = "SELECT * FROM Juomat WHERE juomaId = ?";
     } elseif ($taulu == "Lisukkeet") {
-        $sql = "SELECT * FROM Lisukkeet WHERE LisukeID = ?";
+        $sql = "SELECT * FROM Lisukkeet WHERE LisukeId = ?";
     }
 
     $stmt = mysqli_prepare($yhteys, $sql);
@@ -38,17 +38,17 @@ try {
 
     // Määritetään muuttujat lomaketta varten riippuen taulusta
     if ($taulu == "Ruuat") {
-        $id = $tuote->RuokaID;
-        $nimi = $tuote->RuokaNimi;
-        $hinta = $tuote->RuokaHinta;
+        $id = $tuote->ruokaId;
+        $nimi = $tuote->ruokaNimi;
+        $hinta = $tuote->ruokaHinta;
     } elseif ($taulu == "Juomat") {
-        $id = $tuote->JuomaID;
-        $nimi = $tuote->JuomaNimi;
-        $hinta = $tuote->JuomaHinta;
+        $id = $tuote->juomaId;
+        $nimi = $tuote->juomaNimi;
+        $hinta = $tuote->juomaHinta;
     } elseif ($taulu == "Lisukkeet") {
-        $id = $tuote->LisukeID;
-        $nimi = $tuote->LisukeNimi;
-        $hinta = $tuote->LisukeHinta;
+        $id = $tuote->LisukeId;
+        $nimi = $tuote->lisukeNimi;
+        $hinta = $tuote->lisukeHinta;
     }
 
 } catch(Exception $e) {
@@ -73,5 +73,6 @@ try {
     </form>
 </body>
 </html>
+
 
 <?php mysqli_close($yhteys); ?>
