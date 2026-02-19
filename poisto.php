@@ -7,7 +7,7 @@ try {
     $yhteys = mysqli_connect("db", "root", "password", "lounas");
 }
 catch(Exception $e) {
-    echo json_encode(["status" => "error"]);
+    print json_encode(["status" => "error"]);
     exit;
 }
 
@@ -30,7 +30,7 @@ if (isset($_GET["poistettava"]) && isset($_GET["taulu"])) {
     mysqli_stmt_bind_param($stmt, 'i', $poistettava);
     mysqli_stmt_execute($stmt);
 
-    echo json_encode(["status" => "ok"]);
+    print json_encode(["status" => "ok"]);
 }
 
 mysqli_close($yhteys);
