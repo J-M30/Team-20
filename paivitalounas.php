@@ -29,11 +29,11 @@ catch(Exception $e){
 
 //
 if ($taulu == "Ruuat") {
-    $sql = "UPDATE Ruuat SET RuokaNimi=?, RuokaHinta=? WHERE RuokaID=?";
+    $sql = "UPDATE Ruuat SET ruokaNimi=?, ruokaHinta=? WHERE ruokaId=?";
 } elseif ($taulu == "Juomat") {
-    $sql = "UPDATE Juomat SET JuomaNimi=?, JuomaHinta=? WHERE JuomaID=?";
+    $sql = "UPDATE Juomat SET juomaNimi=?, juomaHinta=? WHERE juomaId=?";
 } elseif ($taulu == "Lisukkeet") {
-    $sql = "UPDATE Lisukkeet SET LisukeNimi=?, LisukeHinta=? WHERE LisukeID=?";
+    $sql = "UPDATE Lisukkeet SET lisukeNimi=?, lisukeHinta=? WHERE LisukeId=?";
 }
 
 //Valmistellaan sql-lause
@@ -47,4 +47,5 @@ mysqli_close($yhteys);
 
 header("Location:menu.html");
 exit;
+
 ?>
