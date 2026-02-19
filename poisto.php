@@ -17,13 +17,13 @@ if (isset($_GET["poistettava"]) && isset($_GET["taulu"])) {
     $taulu = $_GET["taulu"];
 
     if ($taulu == "Ruuat") {
-        $sql = "DELETE FROM Ruuat WHERE RuokaID=?";
+        $sql = "DELETE FROM Ruuat WHERE ruokaId=?";
     }
     elseif ($taulu == "Juomat") {
-        $sql = "DELETE FROM Juomat WHERE JuomaID=?";
+        $sql = "DELETE FROM Juomat WHERE juomaId=?";
     }
     elseif ($taulu == "Lisukkeet") {
-        $sql = "DELETE FROM Lisukkeet WHERE LisukeID=?";
+        $sql = "DELETE FROM Lisukkeet WHERE lisukeId=?";
     }
 
     $stmt = mysqli_prepare($yhteys, $sql);
