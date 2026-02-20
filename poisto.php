@@ -30,13 +30,13 @@ if (isset($poistettava) && isset($taulu)) {
 
     //valitaan oikea sql-lause sen mukaan mistä taulusta poistetaan
     if ($taulu == "Ruuat") {
-        $sql = "DELETE FROM Ruuat WHERE RuokaID=?";
+        $sql = "DELETE FROM Ruuat WHERE ruokaId=?";
     }
     elseif ($taulu == "Juomat") {
-        $sql = "DELETE FROM Juomat WHERE JuomaID=?";
+        $sql = "DELETE FROM Juomat WHERE juomaId=?";
     }
     elseif ($taulu == "Lisukkeet") {
-        $sql = "DELETE FROM Lisukkeet WHERE LisukeID=?";
+        $sql = "DELETE FROM Lisukkeet WHERE LisukeId=?";
     }
 
     //stmt=statement eli tehdään sql-lause
@@ -70,10 +70,10 @@ while ($rivi = mysqli_fetch_object($ruuat)) {
 
     //tulostetaan ruoan tiedot ja poistamislinkki
     print "<li>
-        RuokaID=$rivi->RuokaID 
-        Nimi=$rivi->RuokaNimi 
-        Hinta=$rivi->RuokaHinta €
-        <a href='poisto.php?taulu=Ruuat&poistettava=".$rivi->RuokaID."'>Poista</a>
+        RuokaID=$rivi->ruokaId 
+        Nimi=$rivi->ruokaNimi 
+        Hinta=$rivi->ruokaHinta €
+        <a href='poisto.php?taulu=Ruuat&poistettava=".$rivi->ruokaId."'>Poista</a>
     </li>";
 }
 
@@ -89,10 +89,10 @@ while ($rivi = mysqli_fetch_object($juomat)) {
 
     // Sama logiikka kuin ruuissa
     print "<li>
-        JuomaID=$rivi->JuomaID 
-        Nimi=$rivi->JuomaNimi 
-        Hinta=$rivi->JuomaHinta €
-        <a href='poisto.php?taulu=Juomat&poistettava=".$rivi->JuomaID."'>Poista</a>
+        JuomaID=$rivi->juomaId 
+        Nimi=$rivi->juomaNimi 
+        Hinta=$rivi->juomaHinta €
+        <a href='poisto.php?taulu=Juomat&poistettava=".$rivi->juomaId."'>Poista</a>
     </li>";
 }
 
@@ -107,10 +107,10 @@ print "<ol>";
 while ($rivi = mysqli_fetch_object($lisukkeet)) {
 
     print "<li>
-        LisukeID=$rivi->LisukeID 
-        Nimi=$rivi->LisukeNimi 
-        Hinta=$rivi->LisukeHinta €
-        <a href='poisto.php?taulu=Lisukkeet&poistettava=".$rivi->LisukeID."'>Poista</a>
+        LisukeID=$rivi->LisukeId 
+        Nimi=$rivi->lisukeNimi 
+        Hinta=$rivi->lisukeHinta €
+        <a href='poisto.php?taulu=Lisukkeet&poistettava=".$rivi->LisukeId."'>Poista</a>
     </li>";
 }
 
