@@ -22,21 +22,21 @@ header('Content-Type: application/json; charset=utf-8');
 
 
     while ($rivi=mysqli_fetch_object($tulos)){
-        $r = new stdClass();
+        $r = new Class{};
     $r->ruokaId = $rivi->RuokaID;       
     $r->ruokaNimi = $rivi->RuokaNimi;
     $r->ruokaHinta = $rivi->RuokaHinta;
     $ruoka[] = $r;
     }
     while ($rivi=mysqli_fetch_object($tulos2)){
-        $j = new stdClass();
+        $j = new Class{};
     $j->juomaId = $rivi->JuomaID;
     $j->juomaNimi = $rivi->JuomaNimi;
     $j->juomaHinta = $rivi->JuomaHinta;
     $juoma[] = $j;
     }
     while ($rivi=mysqli_fetch_object($tulos3)){
-        $l = new stdClass();
+        $l = new Class{};
     $l->LisukeId = $rivi->LisukeID;
     $l->lisukeNimi = $rivi->LisukeNimi;
     $l->lisukeHinta = $rivi->LisukeHinta;
