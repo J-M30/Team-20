@@ -401,7 +401,7 @@ h5 { /*Löydä meidät otsikko etusivulla */
     display:flex;
     justify-content:center;
 
-    .nappi{
+    button{
         background-color:#D79922;
         display:flex;
         justify-content: center;
@@ -416,6 +416,40 @@ h5 { /*Löydä meidät otsikko etusivulla */
         
     }
 }
+
+.lounaslomakkeet{
+    background-color: #efe2ba;
+   margin-top:5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+    padding-bottom: 1%;
+    padding-top:1%; 
+    display:flex;
+    justify-content:center;
+
+    
+    
+    h2{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+        font-family: "Nabla", system-ui;
+        filter:grayscale(100%) brightness(0);
+        text-shadow: none !important;
+        
+       
+    form{
+        display: flex;
+        justify-content: center;
+        background-color: #efe2ba;
+    }
+
+
+        
+}
+
+
 
 
 @media (max-width: 900px) {
