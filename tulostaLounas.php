@@ -1,4 +1,6 @@
 <?php    
+error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
+ini_set('display_errors', 0);
 header('Content-Type: application/json; charset=utf-8');
 
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
@@ -20,25 +22,25 @@ header('Content-Type: application/json; charset=utf-8');
 
 
     while ($rivi=mysqli_fetch_object($tulos)){
-        $r=new class{};
-        $r->ruokaId=$rivi->ruokaId;
-        $r->ruokaNimi=$rivi->ruokaNimi;
-        $r->ruokaHinta=$rivi->ruokaHinta;
-        $ruoka[]=$r;
+        $r = new stdClass();
+    $r->ruokaId = $rivi->RuokaID;       
+    $r->ruokaNimi = $rivi->RuokaNimi;
+    $r->ruokaHinta = $rivi->RuokaHinta;
+    $ruoka[] = $r;
     }
     while ($rivi=mysqli_fetch_object($tulos2)){
-        $j=new class{};
-        $j->juomaId=$rivi->juomaId;
-        $j->juomaNimi=$rivi->juomaNimi;
-        $j->juomaHinta=$rivi->juomaHinta;
-        $juoma[]=$j;
+        $j = new stdClass();
+    $j->juomaId = $rivi->JuomaID;
+    $j->juomaNimi = $rivi->JuomaNimi;
+    $j->juomaHinta = $rivi->JuomaHinta;
+    $juoma[] = $j;
     }
     while ($rivi=mysqli_fetch_object($tulos3)){
-        $l=new class{};
-        $l->LisukeId=$rivi->LisukeId; 
-        $l->lisukeNimi=$rivi->lisukeNimi; 
-        $l->lisukeHinta=$rivi->lisukeHinta;
-        $lisuke[]=$l;
+        $l = new stdClass();
+    $l->LisukeId = $rivi->LisukeID;
+    $l->lisukeNimi = $rivi->LisukeNimi;
+    $l->lisukeHinta = $rivi->LisukeHinta;
+    $lisuke[] = $l;
 
     }
 
@@ -55,11 +57,5 @@ header('Content-Type: application/json; charset=utf-8');
     mysqli_close($yhteys);
     print json_encode($vastaus);
 ?>
-
-
-
-    
-    
-    
     
     
