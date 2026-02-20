@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kirjautuminen</title>
+</head>
+<body>
+    <script>
+        function lahetaKayttaja(lomake){
+        var user=new Object();
+        user.tunnus=lomake.tunnus.value;
+        user.salasana=lomake.salasana.value;
+        var jsonUser=JSON.stringify(user);
+
+        xmlhttp=new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function(){
+            if(this.readyState == 4 && this.status == 200) {
+                if(this.responseText=="ok"){
+                    window.location.assign("./tervetuloa.php");
+                }
+                else{
+                   document.getElementById("result").innerHTML = this.responseText;    
+                }
+          }    
+        };
+        xmlhttp.open("POST", "./kirjaudu.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("user=" + jsonUser);
+    }
+    </script>
+
+    <h2>Kirjautuminen</h2>
+    <form id="kirjautumislomake">
+    Nimi:<input type="text" name="tunnus" value=""><br>
+    Hinta:<input type="text" name="salasana"  value=""><br>
+    <input type="button" name="ok" value="Lähetä" onclick="lahetaKayttaja(this.form);"><br>
+    <p id="result"></p>
+    </form>
+</body>
+</html>
