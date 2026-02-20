@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Rekisteröityminen</title>
+</head>
+<body>
+    <script>
+       function lahetaKayttaja(lomake){
+        var user=new Object();
+        user.tunnus=lomake.tunnus.value;
+        user.salasana=lomake.salasana.value;
+        var jsonUser=JSON.stringify(user);
+
+        xmlhttp=new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function(){
+            if(this.readyState == 4 && this.status == 200) {
+                document.getElementById("result").innerHTML = this.responseText;            }    
+        };
+        xmlhttp.open("POST", "./rekisteroidy.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("user=" + jsonUser);
+    }
+    </script>
+
+    <h2>Rekisteröidy</h2>
+    <form id="kirjautumislomake">
+    Tunnus:<input type="text" name="tunnus" value=""><br>
+    Salasana:<input type="text" name="salasana"  value=""><br>
+    <input type="button" name="ok" value="Lähetä" onclick="lahetaKayttaja(this.form);"><br>
+    <p id="result"></p>
+    </form>
+</body>
+</html>
